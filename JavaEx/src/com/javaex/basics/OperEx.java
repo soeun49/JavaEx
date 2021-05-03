@@ -27,8 +27,7 @@ public class OperEx {
 		System.out.println("점수:" + score+ ", 결과:" + message);
 	}
 	
-	
-	//비트 시프트 연산자: 비트 단위의 이동
+		//비트 시프트 연산자: 비트 단위의 이동
 	private static void bitShift() {
 			int data =1 ; 
 			
