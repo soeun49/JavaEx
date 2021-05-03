@@ -31,17 +31,23 @@ public class ConditionalEx {
 		case "THURSDAY":
 		act = "열공";
 		break;
+		
 		case "FRIDAY":
 			act =  "불금";
+			break;
+		
 		case "SATURDAY":
-			act=  "주말";
+			act =  "주말";
+			break;
+			
 		case "SUNDAY":
-			act= "휴식";
+			act = "휴식";
+			break;
 			default:
-				act= "?";
-				
-			System.out.println(day + "에는 " + act);
+				act = "?";
 		}
+			System.out.println(day + "에는 " + act);
+		
 	}
 	
 	
