@@ -7,13 +7,14 @@ public class ConsoleEx {
 		
 	}
 private static void consoleOutputEx() {
-//콘솔 출력
+	//콘솔 출력
 	//System.out -> 표준 출력
 	//System.err -> 표준 에러
 	
-	// print 매서드 -> 출력 후 개행 안함
+	// print 매서드 -> 출력 후 개행 안 함
 	// println 매서드 -> 출력 후 개행 함 
 	// printf 매서드 -> 형식화된 출력 -> TODO; 뒤쪽 String 항목에서 정리
+	
 	System.out.print("Hello ");
 	System.out.println("Java");
 	
@@ -27,6 +28,7 @@ private static void consoleOutputEx() {
 	
 	System.err.println("표준 에러 출력");
 	
-	
-}
+	}
+
+
 }
