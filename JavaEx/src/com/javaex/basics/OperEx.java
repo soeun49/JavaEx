@@ -6,7 +6,42 @@ public class OperEx {
 		arithOperEx();
 		logicOper();
 		bitOper();
+		bitShift();
+		conditionalOper();
 	}
+	
+	//3항 연산자: 조건부 연산
+	private static void conditionalOper() {
+		int a=10; 
+		//a가 짝수면, 짝수; 아니면 홀수
+		String message;
+		//조건식 ? 참일때의 값:거짓일 때의 값
+		message = a%2==0 ? "짝수":"홀수"; 
+	
+		System.out.println(a+"는"+ message);
+		
+		int score=40; 
+		// 점수가 80점 이상이면 good; 50~80점: pass; 그 이하면 fail
+		message = score>= 80? "good": score >=50 ? "pass":"fail"; 
+		
+		System.out.println("점수:" + score+ ", 결과:" + message);
+	}
+	
+	//비트 시프트 연산자: 비트 단위의 이동
+	private static void bitShift() {
+			int data =1 ; 
+			
+	System.out.println(data);
+	System.out.println("1비트 왼쪽 시프트:" + Integer.toBinaryString(data <<1));
+	System.out.println("4비트 왼쪽 시프트:" + Integer.toBinaryString(data <<4));
+	
+	data = 0b1000;
+	System.out.println("원본:" + Integer.toBinaryString(data));
+	System.out.println("1비트 우측 시프트:" +Integer.toBinaryString(data>>1));
+	System.out.println("3비트 우측 시프트:" + Integer.toBinaryString(data >>3));
+			
+	}
+
 	//비트 연산자: 비트 단위로 미세한 조작이 필요할 때 사용
 	// 하드웨어 제어, 이미지 프로세싱에 사용
 	private static void bitOper() {
