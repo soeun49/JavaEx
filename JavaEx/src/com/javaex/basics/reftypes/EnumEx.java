@@ -12,7 +12,7 @@ public class EnumEx {
 	private static void enumEx() {
 		//Conditional Ex. switchEx3() --> enum 버전
 		
-		Week today= Week.FRIDAY; 
+		Week today= Week.MONDAY; 
 		
 		String act = "";
 		//Monday~ Thursday : act ;  열공
