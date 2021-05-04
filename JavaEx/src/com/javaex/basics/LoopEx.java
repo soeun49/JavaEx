@@ -13,19 +13,9 @@ public class LoopEx {
 		//continueEx();
 		//breakEx();
 		//randomEx();
-		guguEx();
+	
 	}
-	
-	private static void guguEx() {
-	
-		//for (제어 변수 초기화;반복조건 체크;증감식)
-	
-	for (int i=0; i<=6; i++) {
-		System.out.println();
-	}
-		}
-		
-		
+			
 		private static void randomEx() {
 			//1~45까지의 난수 6개 출력 (중복x)
 			//for문 버전
