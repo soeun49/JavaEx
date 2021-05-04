@@ -12,6 +12,8 @@ public class ConditionalEx {
 		//switchEx2();
 		switchEx3();
 	}
+	
+	
 	private static void switchEx3() {
 		// 코드 값을 문자열로 전달하는 경우
 		//-> 오타 발생 가능, 원하지 않는 입력이 넘어오는 경우가 있다
