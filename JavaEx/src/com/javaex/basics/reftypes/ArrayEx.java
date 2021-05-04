@@ -4,9 +4,9 @@ public class ArrayEx {
 
 	public static void main(String[] args) {
 		//arrayBasic();
-		//multiDimArray();
-		arrayCopyFor();
-		arrayCopySystem();		
+		multiDimArray();
+		//arrayCopyFor();
+		//arrayCopySystem();		
 	}
 	private static void arrayCopySystem() {
 		//System 객체를 이용한 배열의 복사
@@ -70,17 +70,18 @@ public class ArrayEx {
 		
 		
 		System.out.println("table 배열의 행수:" + table.length);
-		for (int row=0; row <table.length; row++) {
-			for (int col = 0; col < table [row].length;col++)
+		for (int row = 0; row < table.length; row++) {
+			for (int col = 0; col < table[row].length; col++) {
 				System.out.print(table[row][col] + "\t");
-			{total+= table[row][col];
-			}
-		System.out.println();
+			total+= table[row][col];
+			
+		
 		}
+			System.out.println();
 		System.out.println("총계:" + total);
 	}
 	
-
+	}
 	
 	private static void arrayBasic() {
 		//선언과 초기화, 사용
