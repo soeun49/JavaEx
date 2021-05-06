@@ -3,7 +3,8 @@ package practice;
 import java.util.Scanner;
 
 public class practice02 {
-
+// 배열 연습문제
+	
 	public static void main(String[] args) {
 		problem01();
 		problem02();
