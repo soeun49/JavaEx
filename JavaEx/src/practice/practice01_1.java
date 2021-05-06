@@ -1,6 +1,6 @@
 package practice;
 
-public class practiceEx1 {
+public class practice01_1 {
 
 	public static void main(String[] args) {
 		guguEx();
