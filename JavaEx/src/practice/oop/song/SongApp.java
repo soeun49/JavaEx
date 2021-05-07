@@ -1,4 +1,4 @@
-package practice.opp.song;
+package practice.oop.song;
 
 public class SongApp {
 
