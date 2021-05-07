@@ -1,6 +1,6 @@
 package com.javaex.exception;
 
-import javax.imageio.IIOException;
+import java.io.IOException;
 
 public class ThrowExcept {
 
@@ -9,10 +9,10 @@ public class ThrowExcept {
 	//종류 2. unchecked Exception - 예외 처리를 해주지 않아도 됨
 	
 	//checked Exception
-	public void executeException() throws IIOException {
+	public void executeException() throws IOException {
 		
 		System.err.println("강제 예외 발생");
-		throw new IIOException("강제 예외");
+		throw new IOException("강제 예외");
 	}
 	
 	//unchecked Exception

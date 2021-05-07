@@ -1,15 +1,16 @@
 package com.javaex.exception;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExceptionEx {
 
 	public static void main(String[] args) {
-		arithmeticExceptionEx();
+		//arithmeticExceptionEx();
 		nullPointerExceptionEx();
-		arrayExceptionEx();
-		throwExceptEx();
+		//arrayExceptionEx();
+		//throwExceptEx();
 
 	}
 
@@ -55,8 +56,8 @@ public class ExceptionEx {
 	}
 	
 	private static void nullPointerExceptionEx() {
-		String str= new String ("Hello");
-		str=null;
+		String str = new String ("Hello");
+		str = null;
 		
 		try{
 			System.out.println(str.toUpperCase());
@@ -94,7 +95,7 @@ public class ExceptionEx {
 		System.err.println("0으로는 나눌 수 없어요");
 		System.err.println("에러메시지:" + e.getMessage());
 		
-	//	} catch (InputMismatchException e) {
+		} catch (InputMismatchException e) {
 			System.err.println("정수를 입력해주세요!"); 
 				
 		} catch (Exception e) { //모든 예외 처리 클래스의 부모
