@@ -53,7 +53,7 @@ public class practice01_2 {
 		
 	}
 	
-	//4장 연습문제 #6
+	//4장 연습문제 #6 - 별로 삼각형
 	private static void Ex6() {
 		for (int i=1; i<=5; i++) {
 			for(int j=1; j<=i;j++) {
@@ -66,7 +66,7 @@ public class practice01_2 {
 		}
 	}
 	
-	//4장 연습문제 #5
+	//4장 연습문제 #5 - 해 구하기
 	private static void Ex5() {
 		for (int x=1; x<=10; x++) {
 			for (int y=1; y<=10; y++) {
@@ -79,7 +79,7 @@ public class practice01_2 {
 		
 	}
 	
-	//4장 연습문제 #4
+	//4장 연습문제 #4 -두 주사위 합이 5가 되면 멈추기
 	private static void Ex4() {
 		while (true) {
 			int num1 = (int)(Math.random()*6)+1;
@@ -94,7 +94,7 @@ public class practice01_2 {
 		
 	}
 	
-	//4장 확인문제 #3
+	//4장 확인문제 #3 1~100까지중 3의 배수의 합 구하기
 	private static void Ex3() {
 		int sum=0;
 		
