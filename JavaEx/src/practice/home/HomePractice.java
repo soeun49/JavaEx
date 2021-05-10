@@ -1,4 +1,4 @@
-package practice.opp;
+package practice.home;
 
 public class HomePractice {
 public static void main (String [] args) {

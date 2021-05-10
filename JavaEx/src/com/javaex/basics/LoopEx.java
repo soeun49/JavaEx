@@ -11,7 +11,7 @@ public class LoopEx {
 		//doWhileEx();
 		//forLoopEx();
 		//continueEx();
-		//breakEx();
+		breakEx();
 		//randomEx();
 	
 	}

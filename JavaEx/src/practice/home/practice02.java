@@ -1,4 +1,4 @@
-package practice;
+package practice.home;
 
 import java.util.Scanner;
 
@@ -9,9 +9,40 @@ public class practice02 {
 		//problem01();
 		//problem02();
 		//problem05();
-		problem04();
+		//problem04();
+		//problem03();
+		proEx();
+	}
+	private static void proEx() {
+		char ch = ' ' ;
+		System.out.println(ch);
+		
 		
 	}
+	
+	private static void problem03() {
+		   char []  c = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};  
+	       
+	       //문장 출력
+	       System.out.println(c);
+	       
+	       //배열의 검사하여 공백이면 콤마로 변경
+	      for (int i=0;i<c.length;i++) {
+	    	  if (c==32) {
+  	    		  System.out.print(",");
+  	    		 continue;
+	    	  }
+	    	 }  
+	    	
+	       
+	       //문장 출력
+	      System.out.println(c);
+	}
+	       
+	
+	   
+	
+	
 // 로또 추첨(!)
 	private static void problem04() {
 		    		int[] no = new int[6];
