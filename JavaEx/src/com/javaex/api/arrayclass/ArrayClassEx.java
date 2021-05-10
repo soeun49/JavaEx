@@ -10,7 +10,7 @@ public class ArrayClassEx {
 //		copyArrayEx();
 //		sortEx();
 //		sortCustomEx();
-		searchEx();
+//		searchEx();
 	}
 	
 	//배열 내 검색
