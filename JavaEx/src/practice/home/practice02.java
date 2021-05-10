@@ -10,12 +10,7 @@ public class practice02 {
 		//problem02();
 		//problem05();
 		//problem04();
-		//problem03();
-		proEx();
-	}
-	private static void proEx() {
-		char ch = ' ' ;
-		System.out.println(ch);
+		problem03();
 		
 		
 	}
@@ -27,22 +22,18 @@ public class practice02 {
 	       System.out.println(c);
 	       
 	       //배열의 검사하여 공백이면 콤마로 변경
-	      for (int i=0;i<c.length;i++) {
-	    	  if (c==32) {
-  	    		  System.out.print(",");
-  	    		 continue;
-	    	  }
-	    	 }  
-	    	
+	   
+	       String str = new String(c);
+	       String text = str.replace(' ',',');
+	       char[] arrChar = text.toCharArray();
+	    	  	    	
 	       
 	       //문장 출력
-	      System.out.println(c);
+	
+	       System.out.println(arrChar);
 	}
-	       
 	
-	   
-	
-	
+	   	
 // 로또 추첨(!)
 	private static void problem04() {
 		    		int[] no = new int[6];
