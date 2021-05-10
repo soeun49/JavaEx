@@ -1,4 +1,4 @@
-package practice.home;
+package practice.home.practice;
 
 public class HomePractice {
 public static void main (String [] args) {

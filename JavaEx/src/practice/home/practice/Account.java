@@ -1,4 +1,4 @@
-package practice.home;
+package practice.home.practice;
 
 //#6장 연습문제 #19
 

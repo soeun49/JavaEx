@@ -1,4 +1,4 @@
-package practice.oop.song;
+package practice.home.practice.oop.song;
 
 public class Song {
 

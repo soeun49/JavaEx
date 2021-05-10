@@ -1,4 +1,4 @@
-package practice.oop.tv;
+package practice.home.practice.oop.tv;
 
 public class TVApp {
 

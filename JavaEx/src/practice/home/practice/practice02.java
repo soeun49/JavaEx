@@ -1,4 +1,4 @@
-package practice.home;
+package practice.home.practice;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class practice02 {
 		//problem02();
 		//problem05();
 		//problem04();
-		problem03();
+		//problem03();
 		
 		
 	}
@@ -18,19 +18,13 @@ public class practice02 {
 	private static void problem03() {
 		   char []  c = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};  
 	       
-	       //문장 출력
 	       System.out.println(c);
 	       
-	       //배열의 검사하여 공백이면 콤마로 변경
-	   
 	       String str = new String(c);
 	       String text = str.replace(' ',',');
 	       char[] arrChar = text.toCharArray();
 	    	  	    	
-	       
-	       //문장 출력
-	
-	       System.out.println(arrChar);
+		   System.out.println(arrChar);
 	}
 	
 	   	
