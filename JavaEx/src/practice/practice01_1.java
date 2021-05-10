@@ -61,6 +61,7 @@ public class practice01_1 {
 			
 		} }
 		System.out.println("프로그램 종료");
+		scanner.close();
 		
 		
 			

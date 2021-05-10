@@ -12,7 +12,7 @@ public class practice02 {
 		problem04();
 		
 	}
-
+// 로또 추첨(!)
 	private static void problem04() {
 		    		int[] no = new int[6];
 	        
