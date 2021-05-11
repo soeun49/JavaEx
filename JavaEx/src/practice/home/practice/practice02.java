@@ -117,7 +117,7 @@ private static void problem02() {
 		num[i]=scanner.nextInt();
 
 	sum += num[i];
-	avg = (double)sum/ num.length ;
+	avg = (float)sum/ num.length ;
 	
 	
 	}
