@@ -1,9 +1,8 @@
 package com.javaex.api.collection.hash;
 
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.Map;
-
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class HashtableEx {
 
@@ -30,12 +29,18 @@ public class HashtableEx {
 			System.out.println("303:" + map.get("303"));
 			
 			//키가 있는지 확인: containsKey
-			System.out.println("303�� �ִ°�?" + map.containsKey("303"));
-			System.out.println("505�� �ִ°�?" + map.containsKey("505"));
+			System.out.println("303이 있는가?" + map.containsKey("303"));
+			System.out.println("505가 있는가?" + map.containsKey("505"));
 			
 			//값중에서 subject가 Java인 값이 있는가? : containsValue
-			System.out.println("Java�� ���� �ִ°�?" + map.containsValue(new ClassRoom("Java","R101")));
+			System.out.println("Java가 값에 있는가?" + map.containsValue(new ClassRoom("Java","R101")));
 			
+			//iterator
+			Iterator <String> it = map.keySet().iterator(); // 키의 반복자 
+			while (it.hasNext()) {
+				String key= it.next(); // 키를 추출
+				System.out.println(map.get(key));
+			}
 			
 			//맵 비우기
 			map.clear();
