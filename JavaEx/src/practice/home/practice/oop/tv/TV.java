@@ -6,7 +6,7 @@ public class TV {
 	private int y;
 	private boolean z;
 	
-	public Point (int x, int y, boolean z) {
+	public void Point (int x, int y, boolean z) {
 		this.x=x;
 		this.y=y;
 		this.z=z;
