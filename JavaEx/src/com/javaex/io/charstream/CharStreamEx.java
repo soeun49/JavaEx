@@ -15,7 +15,7 @@ public class CharStreamEx {
 		//텍스트 기록 (Writer)
 		try { 
 			Writer fw = new FileWriter (filename) ;
-			fw.write("Bit Computer \r\n");
+			fw.write("Bit Computer \r\n"); // "\r\n" = enter 
 			fw.write("Java Programming \r\n");
 			fw.write ("2021.05");
 			fw.flush();
