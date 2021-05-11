@@ -23,7 +23,7 @@ public class FriendApp {
 			name[i] =scanner.next();
 			number[i] = scanner.next();
 			school[i]= scanner.next();
-			
+			continue;}
 			
 			Friend f1= new Friend();
 			f1.setName(name[0]);
@@ -38,25 +38,25 @@ public class FriendApp {
 			Friend f3= new Friend();
 			f3.setName(name[2]);
 			f3.setNumber(number[2]);
-			f3.setSchool(number[2]);
+			f3.setSchool(school[2]);
 			
 			
-			System.out.printf("%s, %s, %s %n", 
-					f1.getName(), f1.getNumber(),
-					f1.getSchool());
-	
-			System.out.printf("%s, %s, %s %n", 
-					f2.getName(), f2.getNumber(),
-					f2.getSchool());
-			System.out.printf("%s, %s, %s %n", 
-					f3.getName(), f3.getNumber(),
-					f3.getSchool());
+//			System.out.printf("%s, %s, %s %n", 
+//					f1.getName(), f1.getNumber(),
+//					f1.getSchool());
+//	
+//			System.out.printf("%s, %s, %s %n", 
+//					f2.getName(), f2.getNumber(),
+//					f2.getSchool());
+//			System.out.printf("%s, %s, %s %n", 
+//					f3.getName(), f3.getNumber(),
+//					f3.getSchool());
 	
 			f1.showInfo();
 			f2.showInfo();
 			f3.showInfo();
 
-		}
+		
 		scanner.close();
 		
 		}
