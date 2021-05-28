@@ -1,10 +1,14 @@
 package com.javaex.nosql;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.bson.Document;
 import org.bson.conversions.Bson;
+
+import com.mongodb.MongoClientSettings;
+import com.mongodb.ServerAddress;
 
 //서버 > DB> Collection 얻어오기
 
@@ -22,8 +26,8 @@ public class MongodbTest {
 	static String COLL_NAME="testCollection";
 	
 	public static void main(String[] args) {
-//		connect();
-		getCollection(DB_NAME,COLL_NAME);
+		connect();
+//		getCollection(DB_NAME,COLL_NAME);
 //		testInsert();
 //		testInsertMany();
 //		testFindFirst();
@@ -35,7 +39,9 @@ public class MongodbTest {
 	
 	private static void testremove() {
 		MongoCollection<Document> coll = getCollection(DB_NAME,COLL_NAME);
-	
+		Bson bsonFilter=Filters.or(Filters.eq("gender","FEMALE"),Filters.eq("gender","MALE"));
+//		Delete del = coll.deleteMany("species","인간");
+//		System.out.println(del);
 
 	}
 	
@@ -147,14 +153,14 @@ public class MongodbTest {
 		
 	}
 	private static MongoCollection<Document> getCollection(
-			String DB_NAME, String COLL_NAME) {
+			String databaseName, String collectionName) {
 		//접속 
 		MongoClient client=connect();
 		//use Database
-		MongoDatabase db = client.getDatabase(DB_NAME); //use javaMongo
+		MongoDatabase db = client.getDatabase(databaseName); //use javaMongo
 		System.out.println("DATABASE:"+db);
 		//컬렉션 접속 
-		MongoCollection<Document> coll=db.getCollection(COLL_NAME);
+		MongoCollection<Document> coll=db.getCollection(collectionName);
 		System.out.println("COLLECTION:"+coll);
 		return coll;
 				
@@ -163,7 +169,22 @@ public class MongodbTest {
 	
 	private static MongoClient connect() {
 		//몽고 DB 접속 
-		MongoClient client=MongoClients.create();
+//		MongoClient client=MongoClients.create(); 
+		//기본값: ip-> localhost, port ->27017
+		//if MongoDB ip가 localhost가 아니고, port도 27017이 아닌 경우
+		
+		//사용자 정의 설치
+		
+			MongoClient client=MongoClients.create( //서버정보 넣기
+				MongoClientSettings.builder()
+				.applyToClusterSettings (builder -> 
+					builder.hosts(
+							Arrays.asList(
+									new ServerAddress(MONGODB_IP, MONGODB_PORT)
+									)
+							)
+						).build());
+		
 		
 		System.out.println(client);
 		return client;
