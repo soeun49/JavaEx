@@ -6,16 +6,16 @@ import java.util.Scanner;
 public class practice01_2 {
 
 	public static void main(String[] args) {
-		Ex3();
-		Ex4();
-		Ex5();
-		Ex6();
+	//	Ex3();
+	//	Ex4();
+	//	Ex5();
+	//	Ex6();
 		Ex7();
 		
 		
 	}
 	
-	//4장 연습문제 #7
+//4장 연습문제 #7
 	private static void Ex7() {
 		boolean run = true; //run while 문 반복
 		int balance = 0;

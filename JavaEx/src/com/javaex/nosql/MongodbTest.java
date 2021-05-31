@@ -18,6 +18,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.DeleteResult;
+import com.mongodb.client.result.UpdateResult;
 
 public class MongodbTest {
 	static String MONGODB_IP="127.0.0.1"; //localhost
@@ -26,7 +28,7 @@ public class MongodbTest {
 	static String COLL_NAME="testCollection";
 	
 	public static void main(String[] args) {
-		connect();
+//		connect();
 //		getCollection(DB_NAME,COLL_NAME);
 //		testInsert();
 //		testInsertMany();
@@ -35,8 +37,58 @@ public class MongodbTest {
 //		testFindFilter();
 //		testFindFilterwithOr();
 //		testremove();
+//		testDelete();
+//		testUpdateOne();
+		testUpdateMany();
+	}
+	//조건 만족하는 모든 문서 업데이트
+	private static void testUpdateMany() {
+		//gender == FEMALE인 모든 문서
+		//method= "updateMany"
+		MongoCollection<Document> coll= getCollection(DB_NAME,COLL_NAME);
+		Bson filter= Filters.eq("gender","FEMALE");
+		Bson doc = new Document("$set",new Document("method","updateMany"));
+		UpdateResult result= coll.updateMany(filter, doc);
+		
+		System.out.println(result.getMatchedCount()+"개의 문서를 찾았습니다.");
+		System.out.println(result.getModifiedCount() + "개의 문서가 업데이트!");
+		
+		//문서가 조건에 매칭 되어도 내용이 다르지 않으면
+		//update 되지 않음 
+		
 	}
 	
+	//한개 문서 업데이트 (updateOne)
+	private static void testUpdateOne() {
+		//species ==  인간인 문서 한개를 업데이트
+		//method 필드 updateOne
+		//db.testCollection.update({조건},{"$set":{문서}})
+		MongoCollection<Document> coll= getCollection(DB_NAME,COLL_NAME);
+		Bson filter= Filters.eq("species","인간");
+		//주의: 업데이트 시, $set연산자를 사용해야 update, sonst, 문서 갱신
+		Bson doc= new Document("$set",new Document("method","updateOne"));
+		UpdateResult result=coll.updateOne(filter, doc);
+		System.out.println(result.getModifiedCount()+"개의 레코드가 업데이트!");
+				
+	}
+	private static void testDelete() {
+		//db.testCollection.delete({조건})
+		//전체 삭제: db.testCollection.delete({})
+		//gender==MALE인 문서 제거 
+		MongoCollection<Document> coll= getCollection(DB_NAME,COLL_NAME);
+		
+		//Filter: 조건을 이용한 삭제 
+//		Bson filter = Filters.eq("gender","MALE");
+//		DeleteResult result= coll.deleteMany(filter);
+		
+		//전체 삭제
+		DeleteResult result=coll.deleteMany(new Document());
+		
+		System.out.println("삭제결과:" +  result);
+		System.out.println(result.getDeletedCount()+ "개의 레코드 삭제!");
+
+		
+	}
 	private static void testremove() {
 		MongoCollection<Document> coll = getCollection(DB_NAME,COLL_NAME);
 		Bson bsonFilter=Filters.or(Filters.eq("gender","FEMALE"),Filters.eq("gender","MALE"));
